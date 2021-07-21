@@ -1,0 +1,17 @@
+<body>
+    <h1>Item Detail</h1>
+        Name :<%= item.name %> <br>
+        Price : <%= item.price %> <br>
+        Categories : 
+        <% item.categories.each do |category| %>
+            <%= category.name+", " %>
+        <% end %>
+        
+    <br>
+    <br>
+    <br>
+
+    <a href="/items/<%= item.id %>/edit" style="margin-right:10;">Edit</a>
+    <a href="/" style="margin-right:10;">Back to Item List</a>
+    
+</body>
