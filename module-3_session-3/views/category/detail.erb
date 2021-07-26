@@ -1,0 +1,32 @@
+<body>
+    <h1>Category Detail</h1>
+        Category Name :<%= category.name %> <br>
+        Items :
+        <br>
+        <table border="1">
+            <thead>
+                    <tr>
+                        <td>No</td>
+                        <td style="width:200px; text-align:center;">Name</td>
+                        <td style="width:100px; text-align:center;">Price</td> 
+                    <tr>
+            </thead>
+            <tbody>
+                <% category.items.each_with_index do |item, index| %>
+                <tr>
+                    <td><%= index+1 %></td>
+                    <td><%= item.name %> </td>
+                    <td><%= item.price %> </td>  
+                </tr>
+                <% end %>
+            </tbody>
+        </table>
+        
+    <br>
+    <br>
+    <br>
+
+    <a href="/categories/<%= category.id %>/edit" style="margin-right:10;">Edit Category</a>
+    <a href="/categories" style="margin-right:10;">Back to Category List</a>
+    
+</body>

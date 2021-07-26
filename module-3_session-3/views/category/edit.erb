@@ -1,0 +1,11 @@
+<body>
+    <h1>Edit Category</h1>
+
+    <form method="POST" action="/categories/<%= category.id %>/update">
+        Name : <input name="name" value="<%= category.name %>"> 
+        <input value="Update Data" type="submit">
+    </form>
+    <br>
+    <br>
+    <a href="/categories" style="margin-right:10;">Back to Category List</a>
+</body>
